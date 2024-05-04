@@ -39,7 +39,7 @@ class Net(nn.Module):
         b2 = self.layer2.bias.detach().numpy()
         x = np.dot(w2, x) + b2
         x = sp.expand(x[0])
-        print(x)
+        print('Controller:', x)
         return x
 
 
