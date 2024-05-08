@@ -60,7 +60,7 @@ class Learner:
             y_pred = self.net(x)
             loss = self.criterion(y_pred, y)
             print(f'iter:{_}, Loss: {loss.item()}')
-            if loss.item() < self.eps:
+            if loss.item() < self.eps or _ == self.loops - 1:
                 self.net.get_polynomial()
                 break
             loss.backward()

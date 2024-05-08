@@ -118,7 +118,7 @@ def get_Env(id):
             I_zones=Zones('box', low=[-1, -pi / 16], up=[1, pi / 16]),
             G_zones=Zones('ball', center=[0, 0], r=0.1 ** 2),
             U_zones=Zones('box', low=[-5, -pi / 2], up=[5, pi / 2], inner=False),
-            f=[lambda x, u: sin(x[1]),
+            f=[lambda x, u: 0.005621 * x[1] ** 5 - 0.1551 * x[1] ** 3 + 0.9875 * x[1],
                lambda x, u: -u[0]
                ],
             u=3,
